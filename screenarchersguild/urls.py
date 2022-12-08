@@ -15,7 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from django.contrib import admin
+from rest_framework import routers
+from screenarchersguildapi.views.screenshot import ScreenshotView
+from screenarchersguildapi.views.guide import GuideView
 
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'screenshots', ScreenshotView, 'screenshots')
+router.register(r'guides', GuideView, 'guides')
+
+urlpatterns = [
+    path('register', register_user),
+    path('login', login_user),
+    path('admin/', admin.site.urls),
+    path('',include(router.urls)),
+]
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
