@@ -20,11 +20,21 @@ from django.contrib import admin
 from rest_framework import routers
 from screenarchersguildapi.views.screenshot import ScreenshotView
 from screenarchersguildapi.views.guide import GuideView
+from screenarchersguildapi.views.capturetool import CaptureToolView
+from screenarchersguildapi.views.editingtool import EditingToolView
+from screenarchersguildapi.views.screenshotcategory import ScreenshotCategoryView
+from screenarchersguildapi.views.category import CategoryView
+from screenarchersguildapi.views.archer import ArcherView
+from screenarchersguildapi.views.auth import register_user, login_user
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'screenshots', ScreenshotView, 'screenshots')
 router.register(r'guides', GuideView, 'guides')
-
+router.register(r'archers',ArcherView,"archers")
+router.register(r'capturetools',CaptureToolView,"capturetools")
+router.register(r'editingtools',EditingToolView,"editingtools")
+router.register(r'screenshotcatagorys',ScreenshotCategoryView,"screenshotcatagorys")
+router.register(r'categorys',CategoryView,"categorys")
 urlpatterns = [
     path('register', register_user),
     path('login', login_user),

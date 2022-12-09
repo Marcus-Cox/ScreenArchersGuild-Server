@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from screenarchersguildapi.models import Archer
 from screenarchersguildapi.models import Screenshot
-from screenarchersguildapi.models import CaptureTools
-from screenarchersguildapi.models import EditingTools
+from screenarchersguildapi.models import CaptureTool
+from screenarchersguildapi.models import EditingTool
  
 
 class ScreenshotView(ViewSet):
@@ -30,15 +30,15 @@ class ScreenshotView(ViewSet):
         """ Handle a POST request for a Screenshot item """
         # incoming_user = request.auth.user
         archer  = Archer.objects.get(user=request.auth.user)
-        capturetools = CaptureTools.objects.get(pk=request.data["capturetools"])
-        editingtools = EditingTools.objects.get(pk=request.data["editingtools"])
+        captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
+        editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
         
         new_screenshot = Screenshot.objects.create(
             archer=archer,
             image=request.data["image"],
             content=request.data["content"],
-            capturetools=capturetools,
-            editingtools=editingtools,
+            captureTool=captureTool,
+            editingTool=editingTool,
             # isModded ask about boolean field
             timestamp=request.data["timestamp"]
             )
@@ -50,8 +50,8 @@ class ScreenshotView(ViewSet):
         editing_screenshot = Screenshot.objects.get(pk=pk)
         editing_screenshot.image = request.data["image"]
         editing_screenshot.content = request.data["content"]
-        editing_screenshot.captureTools = request.data["captureTools"]
-        editing_screenshot.editingTools = request.data["editingTools"]
+        editing_screenshot.captureTool = request.data["captureTool"]
+        editing_screenshot.editingTool = request.data["editingTool"]
         editing_screenshot.isMooded = request.data["isMooded"]
         editing_screenshot.save()
 
@@ -77,8 +77,8 @@ class ScreenshotSerializer(serializers.ModelSerializer):
             'archer',
             'image',
             'content',
-            'capturetools',
-            'editingtools',
+            'capturetool',
+            'editingtool',
             'isModded',
             'timestamp'
             )

@@ -1,4 +1,4 @@
 from django.db import models
 
-class CaptureTools(models.Model):
+class CaptureTool(models.Model):
     name = models.CharField(max_length=255)
