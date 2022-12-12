@@ -1,20 +1,20 @@
 [
     {
-      "model": "screenarchersguildapi.capturetools",
+      "model": "screenarchersguildapi.capturetool",
       "pk": 1,
       "fields": {
         "name": "OBS"
       }
     },
     {
-      "model": "screenarchersguildapi.capturetools",
+      "model": "screenarchersguildapi.capturetool",
       "pk": 2,
       "fields": {
         "name": "StreamLabs"
       }
     },
     {
-      "model": "screenarchersguildapi.capturetools",
+      "model": "screenarchersguildapi.capturetool",
       "pk": 3,
       "fields": {
         "name": "ShadowPlay"

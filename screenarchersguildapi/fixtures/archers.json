@@ -1,6 +1,6 @@
 [
     {
-        "model": "screenarchersguildapi.archers",
+        "model": "screenarchersguildapi.archer",
         "pk": 1,
         "fields": {
             "user": 1,
