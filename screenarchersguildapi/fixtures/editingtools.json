@@ -1,20 +1,20 @@
 [
     {
-      "model": "screenarchersguildapi.name",
+      "model": "screenarchersguildapi.editingtools",
       "pk": 1,
       "fields": {
         "name": "Procreate"
       }
     },
     {
-      "model": "screenarchersguildapi.name",
+      "model": "screenarchersguildapi.editingtools",
       "pk": 2,
       "fields": {
         "name": "Photoshop"
       }
     },
     {
-      "model": "screenarchersguildapi.name",
+      "model": "screenarchersguildapi.editingtools",
       "pk": 3,
       "fields": {
         "name": "Paint3D"
