@@ -1,0 +1,30 @@
+[
+    {
+      "model": "screenarchersguildapi.category",
+      "pk": 1,
+      "fields": {
+        "category": "Environment"
+      }
+    },
+    {
+      "model": "screenarchersguildapi.category",
+      "pk": 2,
+      "fields": {
+        "category": "Glamor"
+      }
+    },
+    {
+      "model": "screenarchersguildapi.category",
+      "pk": 3,
+      "fields": {
+        "category": "HeadShot"
+      }
+    },
+    {
+      "model": "screenarchersguildapi.category",
+      "pk": 3,
+      "fields": {
+        "category": "Character Reference"
+      }
+    }
+  ]
