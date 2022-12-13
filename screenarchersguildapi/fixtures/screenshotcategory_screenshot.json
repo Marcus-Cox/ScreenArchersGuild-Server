@@ -1,0 +1,34 @@
+[
+    {
+      "model": "screenarchersguildapi.screenshotcategory_screenshot",
+      "pk": 1,
+      "fields": {
+        "screenshotcategory_id": 1,
+        "screenshot_id": 1
+      }
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_screenshot",
+      "pk": 2,
+      "fields": {
+        "screenshotcategory_id": 2,
+        "screenshot_id": 2
+      }
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_screenshot",
+      "pk": 3,
+      "fields": {
+        "screenshotcategory_id": 3,
+        "screenshot_id": 3
+      }
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_screenshot",
+      "pk": 4,
+      "fields": {
+        "screenshotcategory_id": 4,
+        "screenshot_id": 4
+      }
+    }
+  ]

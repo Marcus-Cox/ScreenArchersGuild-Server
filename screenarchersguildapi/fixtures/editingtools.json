@@ -19,5 +19,12 @@
       "fields": {
         "name": "Paint3D"
       }
+    },
+    {
+      "model": "screenarchersguildapi.editingtool",
+      "pk": 4,
+      "fields": {
+        "name": "Vanilla"
+      }
     }
   ]

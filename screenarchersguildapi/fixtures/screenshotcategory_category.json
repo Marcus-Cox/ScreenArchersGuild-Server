@@ -1,18 +1,35 @@
 [
     {
       "model": "screenarchersguildapi.screenshotcategory_category",
-      "pk": 1
+      "pk": 1,
+      "fields": {
+      "screenshotcategory_id": 1,
+      "category_id": 1
+    }
     },
     {
       "model": "screenarchersguildapi.screenshotcategory_category",
-      "pk": 2
+      "pk": 2,
+      "fields": {
+        "screenshotcategory_id": 2,
+        "category_id": 2
+      }
+      
     },
     {
       "model": "screenarchersguildapi.screenshotcategory_category",
-      "pk": 3
+      "pk": 3,
+      "fields": {
+        "screenshotcategory_id": 3,
+        "category_id": 3
+      }
     },
     {
       "model": "screenarchersguildapi.screenshotcategory_category",
-      "pk": 4
+      "pk": 4,
+      "fields": {
+        "screenshotcategory_id": 4,
+        "category_id": 4
+      }
     }
   ]

@@ -4,8 +4,47 @@
         "pk": 1,
         "fields": {
             "archer_id": 1,
-            "image": "Test Guide",
+            "image": "https://tressays.files.wordpress.com/2015/09/test-clip-art-cpa-school-test.png",
             "content": "If you see this on the main page you're almost at Capstone",
+            "captureTool_id": 1,
+            "editingTool_id":1,
+            "isMooded": true,
+            "timestamp":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.screenshot",
+        "pk": 2,
+        "fields": {
+            "archer_id": 1,
+            "image": "https://assets-prd.ignimgs.com/2021/08/19/elder-scrolls-skyrim-button-2017-1629409446732.jpg",
+            "content": "Use the Update Function to Make this into a Skyrim Screenshot",
+            "captureTool_id": 4,
+            "editingTool_id": 4,
+            "isMooded": false,
+            "timestamp":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.screenshot",
+        "pk": 3,
+        "fields": {
+            "archer_id": 1,
+            "image": "https://cdn.akamai.steamstatic.com/steam/apps/39210/capsule_616x353.jpg?t=1643126664",
+            "content": "Update into a FFXIV Screenshot",
+            "captureTool_id": 1,
+            "editingTool_id":1,
+            "isMooded": true,
+            "timestamp":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.screenshot",
+        "pk": 4,
+        "fields": {
+            "archer_id": 1,
+            "image": "https://swtorista.com/articles/wp-content/uploads/2022/01/swtor-settings-guide.jpg",
+            "content": "Make into a Swtor Screenshot",
             "captureTool_id": 1,
             "editingTool_id":1,
             "isMooded": true,
