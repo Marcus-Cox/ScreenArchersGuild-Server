@@ -5,10 +5,10 @@
         "fields": {
             "archer_id": 1,
             "image": "https://tressays.files.wordpress.com/2015/09/test-clip-art-cpa-school-test.png",
-            "content": "If you see this on the main page you're almost at Capstone",
+            "content": "If you see this on the main page you're almost at Capstone MVP Change to a Guilty Gear Screenshot on via the react client.",
             "captureTool_id": 1,
             "editingTool_id":1,
-            "isMooded": true,
+            "isModded": true,
             "timestamp":"2020-03-12"
         }
     },
@@ -21,7 +21,7 @@
             "content": "Use the Update Function to Make this into a Skyrim Screenshot",
             "captureTool_id": 4,
             "editingTool_id": 4,
-            "isMooded": false,
+            "isModded": false,
             "timestamp":"2020-03-12"
         }
     },
@@ -34,7 +34,7 @@
             "content": "Update into a FFXIV Screenshot",
             "captureTool_id": 1,
             "editingTool_id":1,
-            "isMooded": true,
+            "isModded": true,
             "timestamp":"2020-03-12"
         }
     },
@@ -47,7 +47,33 @@
             "content": "Make into a Swtor Screenshot",
             "captureTool_id": 1,
             "editingTool_id":1,
-            "isMooded": true,
+            "isModded": true,
+            "timestamp":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.screenshot",
+        "pk": 5,
+        "fields": {
+            "archer_id": 1,
+            "image": "https://news.climate.columbia.edu/wp-content/uploads/2016/10/Garbagehope.jpg",
+            "content": "Delete this using Postman",
+            "captureTool_id": 1,
+            "editingTool_id":1,
+            "isModded": true,
+            "timestamp":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.screenshot",
+        "pk": 6,
+        "fields": {
+            "archer_id": 1,
+            "image": "https://washingtonterracecity.com/vertical/Sites/%7B9D63E994-3168-4A6B-BFBB-6BA2F03103EB%7D/uploads/binblur(1).png",
+            "content": "Delete this using the Client",
+            "captureTool_id": 1,
+            "editingTool_id":1,
+            "isModded": true,
             "timestamp":"2020-03-12"
         }
     }

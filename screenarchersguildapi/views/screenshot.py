@@ -77,8 +77,8 @@ class ScreenshotSerializer(serializers.ModelSerializer):
             'archer',
             'image',
             'content',
-            'capturetool',
-            'editingtool',
+            'captureTool',
+            'editingTool',
             'isModded',
             'timestamp'
             )
