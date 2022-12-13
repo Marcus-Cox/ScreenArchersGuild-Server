@@ -4,10 +4,10 @@
         "pk": 1,
         "fields": {
             "archer_id": 1,
-            "image url": "Test Guide",
+            "image": "Test Guide",
             "content": "If you see this on the main page you're almost at Capstone",
-            "CaptureTools_id": 1,
-            "EditingTools_id":1,
+            "captureTool_id": 1,
+            "editingTool_id":1,
             "isMooded": true,
             "timestamp":"2020-03-12"
         }

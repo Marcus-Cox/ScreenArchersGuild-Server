@@ -1,0 +1,18 @@
+[
+    {
+      "model": "screenarchersguildapi.screenshotcategory_category",
+      "pk": 1
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_category",
+      "pk": 2
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_category",
+      "pk": 3
+    },
+    {
+      "model": "screenarchersguildapi.screenshotcategory_category",
+      "pk": 4
+    }
+  ]

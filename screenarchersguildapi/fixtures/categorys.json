@@ -22,7 +22,7 @@
     },
     {
       "model": "screenarchersguildapi.category",
-      "pk": 3,
+      "pk": 4,
       "fields": {
         "category": "Character Reference"
       }
