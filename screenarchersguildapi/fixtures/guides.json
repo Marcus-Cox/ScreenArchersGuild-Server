@@ -1,0 +1,13 @@
+[
+    {
+        "model": "screenarchersguildapi.guide",
+        "pk": 1,
+        "fields": {
+            "writer_id": 1,
+            "title": "Test Guide",
+            "description": "If you see this on the main page you're almost at Capstone",
+            "content": "Keep going you can do it.",
+            "publishing_date":"2020-03-12"
+        }
+    }
+]
