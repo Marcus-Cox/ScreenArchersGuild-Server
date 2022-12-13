@@ -39,7 +39,7 @@ class ScreenshotView(ViewSet):
             content=request.data["content"],
             captureTool=captureTool,
             editingTool=editingTool,
-            # isModded ask about boolean field
+            isModded=request.data["isModded"],
             timestamp=request.data["timestamp"]
             )
         serializer = ScreenshotSerializer(new_screenshot)
@@ -47,12 +47,16 @@ class ScreenshotView(ViewSet):
 
     def update(self, request, pk):
         """ Handles a PUT request for a Screenshot item """
+        
+        captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
+        editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
+        
         editing_screenshot = Screenshot.objects.get(pk=pk)
         editing_screenshot.image = request.data["image"]
         editing_screenshot.content = request.data["content"]
-        editing_screenshot.captureTool = request.data["captureTool"]
-        editing_screenshot.editingTool = request.data["editingTool"]
-        editing_screenshot.isMooded = request.data["isMooded"]
+        editing_screenshot.captureTool = captureTool
+        editing_screenshot.editingTool = editingTool
+        editing_screenshot.isModded = request.data["isModded"]
         editing_screenshot.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
