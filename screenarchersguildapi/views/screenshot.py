@@ -39,7 +39,6 @@ class ScreenshotView(ViewSet):
             content=request.data["content"],
             captureTool=captureTool,
             editingTool=editingTool,
-            isModded=request.data["isModded"],
             timestamp=request.data["timestamp"]
             )
         serializer = ScreenshotSerializer(new_screenshot)
@@ -56,7 +55,6 @@ class ScreenshotView(ViewSet):
         editing_screenshot.content = request.data["content"]
         editing_screenshot.captureTool = captureTool
         editing_screenshot.editingTool = editingTool
-        editing_screenshot.isModded = request.data["isModded"]
         editing_screenshot.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -83,6 +81,5 @@ class ScreenshotSerializer(serializers.ModelSerializer):
             'content',
             'captureTool',
             'editingTool',
-            'isModded',
             'timestamp'
             )

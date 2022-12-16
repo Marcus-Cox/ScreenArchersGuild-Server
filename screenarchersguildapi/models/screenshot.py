@@ -9,5 +9,4 @@ class Screenshot(models.Model):
     content = models.TextField()
     captureTool = models.ForeignKey (CaptureTool, on_delete=models.CASCADE)
     editingTool = models.ForeignKey (EditingTool, on_delete=models.CASCADE)
-    isModded = models.BooleanField() 
     timestamp = models.DateField(auto_now_add=True)
