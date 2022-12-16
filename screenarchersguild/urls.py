@@ -29,7 +29,7 @@ from screenarchersguildapi.views.auth import register_user, login_user
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'screenshots', ScreenshotView, 'screenshots')
-router.register(r'guides', GuideView, 'guides')
+router.register(r'guides', GuideView, 'guide')
 router.register(r'archers',ArcherView,"archers")
 router.register(r'capturetools',CaptureToolView,"capturetools")
 router.register(r'editingtools',EditingToolView,"editingtools")
