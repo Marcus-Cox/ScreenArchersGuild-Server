@@ -9,5 +9,27 @@
             "content": "Keep going you can do it.",
             "publishing_date":"2020-03-12"
         }
+    },
+    {
+        "model": "screenarchersguildapi.guide",
+        "pk": 2,
+        "fields": {
+            "writer_id": 1,
+            "title": "Test Guide 2",
+            "description": "If you see this on the main page you're almost at Capstone",
+            "content": "Edit this to have the entirety of it changed.",
+            "publishing_date":"2020-03-12"
+        }
+    },
+    {
+        "model": "screenarchersguildapi.guide",
+        "pk": 3,
+        "fields": {
+            "writer_id": 1,
+            "title": "Test Guide",
+            "description": "If you see this on the main page you're almost at Capstone",
+            "content": "This has been made to be identical to the first test guide, delete it. for proof of crud",
+            "publishing_date":"2020-03-12"
+        }
     }
 ]
