@@ -3,28 +3,28 @@
       "model": "screenarchersguildapi.category",
       "pk": 1,
       "fields": {
-        "category": "Environment"
+        "description": "Environment"
       }
     },
     {
       "model": "screenarchersguildapi.category",
       "pk": 2,
       "fields": {
-        "category": "Glamor"
+        "description": "Glamor"
       }
     },
     {
       "model": "screenarchersguildapi.category",
       "pk": 3,
       "fields": {
-        "category": "HeadShot"
+        "description": "HeadShot"
       }
     },
     {
       "model": "screenarchersguildapi.category",
       "pk": 4,
       "fields": {
-        "category": "Character Reference"
+        "description": "Character Reference"
       }
     }
   ]
