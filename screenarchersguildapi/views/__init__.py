@@ -5,4 +5,3 @@ from .screenshot import ScreenshotView
 from .capturetool import CaptureToolView
 from .editingtool import EditingToolView
 from .category import CategoryView
-from .screenshotcategory import ScreenshotCategoryView

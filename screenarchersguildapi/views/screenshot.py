@@ -2,12 +2,8 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from screenarchersguildapi.models import Archer
-from screenarchersguildapi.models import Screenshot
-from screenarchersguildapi.models import CaptureTool
-from screenarchersguildapi.models import EditingTool
+from screenarchersguildapi.models import Archer,Screenshot,CaptureTool,EditingTool,Category
  
-
 class ScreenshotView(ViewSet):
     """ Screenshot Items Viewset """
 
@@ -32,6 +28,7 @@ class ScreenshotView(ViewSet):
         archer  = Archer.objects.get(user=request.auth.user)
         captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
         editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
+        category = Category.objects.get(pk=request.data["category"])
         
         new_screenshot = Screenshot.objects.create(
             archer=archer,
@@ -39,6 +36,7 @@ class ScreenshotView(ViewSet):
             content=request.data["content"],
             captureTool=captureTool,
             editingTool=editingTool,
+            category = category,
             timestamp=request.data["timestamp"]
             )
         serializer = ScreenshotSerializer(new_screenshot)
@@ -49,12 +47,14 @@ class ScreenshotView(ViewSet):
         
         captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
         editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
-        
+        category = Category.objects.get(pk=request.data["category"])
+
         editing_screenshot = Screenshot.objects.get(pk=pk)
         editing_screenshot.image = request.data["image"]
         editing_screenshot.content = request.data["content"]
         editing_screenshot.captureTool = captureTool
         editing_screenshot.editingTool = editingTool
+        editing_screenshot.category =category
         editing_screenshot.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -69,6 +69,11 @@ class ScreenshotView(ViewSet):
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+class ScreenshotCategorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Category
+        fields = ('description',)
 
 class ScreenshotSerializer(serializers.ModelSerializer):
     """ JSON serializer for Screenshot items """
@@ -81,5 +86,6 @@ class ScreenshotSerializer(serializers.ModelSerializer):
             'content',
             'captureTool',
             'editingTool',
+            'category',
             'timestamp'
             )

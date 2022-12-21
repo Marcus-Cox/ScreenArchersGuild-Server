@@ -3,6 +3,5 @@ from .category import Category
 from .screenshot import Screenshot
 
 class ScreenshotCategory(models.Model):
-    name = models.CharField(max_length=255)
-    category = models.ManyToManyField (Category)
-    screenshot = models.ManyToManyField (Screenshot)
+    screenshot = models.ForeignKey (Screenshot, on_delete=models.CASCADE)
+    category = models.ForeignKey ('Category', on_delete=models.CASCADE, related_name="screenshot_category")

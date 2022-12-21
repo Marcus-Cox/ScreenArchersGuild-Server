@@ -3,28 +3,33 @@
       "model": "screenarchersguildapi.screenshotcategory",
       "pk": 1,
       "fields": {
-        "name": "Environment"
+        "category_id": 1,
+        "screenshot_id": 1
+
       }
     },
     {
       "model": "screenarchersguildapi.screenshotcategory",
       "pk": 2,
       "fields": {
-        "name": "Glamor"
+        "screenshot_id": 2,
+        "category_id": 2
       }
     },
     {
       "model": "screenarchersguildapi.screenshotcategory",
       "pk": 3,
       "fields": {
-        "name": "HeadShot"
+        "screenshot_id": 3,
+        "category_id": 3
       }
     },
     {
       "model": "screenarchersguildapi.screenshotcategory",
       "pk": 4,
       "fields": {
-        "name": "Character Reference"
+        "screenshot_id": 4,
+        "category_id": 4
       }
     }
   ]
