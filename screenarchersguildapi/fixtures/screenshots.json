@@ -8,6 +8,7 @@
             "content": "If you see this on the main page you're almost at Capstone MVP Change to a Guilty Gear Screenshot on via the react client.",
             "captureTool_id": 1,
             "editingTool_id":1,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     },
@@ -20,6 +21,7 @@
             "content": "Use the Update Function to Make this into a Skyrim Screenshot",
             "captureTool_id": 4,
             "editingTool_id": 4,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     },
@@ -32,6 +34,7 @@
             "content": "Update into a FFXIV Screenshot",
             "captureTool_id": 1,
             "editingTool_id":1,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     },
@@ -44,6 +47,7 @@
             "content": "Make into a Swtor Screenshot",
             "captureTool_id": 1,
             "editingTool_id":1,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     },
@@ -56,6 +60,7 @@
             "content": "Delete this using Postman",
             "captureTool_id": 1,
             "editingTool_id":1,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     },
@@ -68,6 +73,7 @@
             "content": "Delete this using the Client",
             "captureTool_id": 1,
             "editingTool_id":1,
+            "category": [1, 2, 3],
             "timestamp":"2020-03-12"
         }
     }
