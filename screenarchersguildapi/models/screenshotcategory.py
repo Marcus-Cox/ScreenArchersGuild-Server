@@ -1,5 +1,4 @@
 from django.db import models
-from .category import Category
 from .screenshot import Screenshot
 
 class ScreenshotCategory(models.Model):

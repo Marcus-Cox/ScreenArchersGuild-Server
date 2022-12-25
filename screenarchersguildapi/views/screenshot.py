@@ -24,11 +24,10 @@ class ScreenshotView(ViewSet):
 
     def create(self, request):
         """ Handle a POST request for a Screenshot item """
-        # incoming_user = request.auth.user
+        
         archer  = Archer.objects.get(user=request.auth.user)
         captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
         editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
-        category = Category.objects.get(pk=request.data["category"])
         
         new_screenshot = Screenshot.objects.create(
             archer=archer,
@@ -36,7 +35,6 @@ class ScreenshotView(ViewSet):
             content=request.data["content"],
             captureTool=captureTool,
             editingTool=editingTool,
-            category = category,
             timestamp=request.data["timestamp"]
             )
         serializer = ScreenshotSerializer(new_screenshot)
