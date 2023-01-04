@@ -38,6 +38,10 @@ class ScreenshotView(ViewSet):
         captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
         editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
         
+        # //new code
+        category = Category.objects.get(pk=request.data["category"])
+        # //new code
+
         new_screenshot = Screenshot.objects.create(
             archer=archer,
             image=request.data["image"],
@@ -46,6 +50,15 @@ class ScreenshotView(ViewSet):
             editingTool=editingTool,
             timestamp=request.data["timestamp"]
             )
+        
+        # //new code 1
+        new_screenshot.category.set([category])  # pass a list containing the Category object
+        # //new code 1
+        
+        #//new code 2
+        # new_screenshot.category.add(category)  # use the add() method to add a single object
+        #//new code 2
+        
         serializer = ScreenshotSerializer(new_screenshot)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -54,12 +67,20 @@ class ScreenshotView(ViewSet):
         
         captureTool = CaptureTool.objects.get(pk=request.data["captureTool"])
         editingTool = EditingTool.objects.get(pk=request.data["editingTool"])
-
+        
+        # //new code
+        category = Category.objects.get(pk=request.data["category"])
+        # //new code
+        
         editing_screenshot = Screenshot.objects.get(pk=pk)
         editing_screenshot.image = request.data["image"]
         editing_screenshot.content = request.data["content"]
         editing_screenshot.captureTool = captureTool
         editing_screenshot.editingTool = editingTool
+        
+        # //new code
+        editing_screenshot.category.set([category])
+        # //new code
         editing_screenshot.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
