@@ -95,12 +95,20 @@ class ScreenshotView(ViewSet):
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-class ScreenshotCategorySerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ('description',)
+        fields = ('description')
 
+
+class CaptureToolSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = CaptureTool
+        fields = ('name')
+
+        
 class ArcherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Archer
@@ -110,6 +118,8 @@ class ArcherSerializer(serializers.ModelSerializer):
 class ScreenshotSerializer(serializers.ModelSerializer):
     """ JSON serializer for Screenshot items """
     archer=ArcherSerializer()
+    captureTool=CaptureToolSerializer
+    category=CategorySerializer
     
     class Meta:
         model = Screenshot
